@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+
+        <TextView
+            android:id="@+id/title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:paddingLeft="18dp"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_login"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="ExtraText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Email"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="ExtraText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:hint="Password"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="Login"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Or, login with..."
+                android:textAlignment="center"
+                android:layout_marginTop="26dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    style="@style/CardView"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/google_icon" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/facebook_icon"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="14dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/apple_icon"/>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="34dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account? "
+                    android:textSize="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onRegisterClicked"
+                    android:text="Register"
+                    android:textColor="#6200EE"
+                    android:textColorLink="#6200EE"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
